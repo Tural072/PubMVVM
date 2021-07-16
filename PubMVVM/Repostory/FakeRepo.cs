@@ -18,25 +18,28 @@ namespace PubMVVM.Repostory
                     Name="NZS",
                     Price=1,
                     Volume=0.4,
-                    ImagePath="Images/bread1.png"
+                    ImagePath="../Images/NZS.png"
                 },
                 new Pub
                 {
                     Name="Blanche",
                     Price=6.5,
-                    Volume=0.5
+                    Volume=0.5,
+                    ImagePath="../Images/Blanche.png"
                 },
                 new Pub
                 {
                     Name="Erdinger",
                     Price=7,
-                    Volume=0.5
+                    Volume=0.5,
+                    ImagePath="../Images/Erdinger.png"
                 },
                 new Pub
                 {
-                    Name="Salyan",
-                    Price=1,
-                    Volume=0.4
+                    Name="Weisbier",
+                    Price=9,
+                    Volume=0.5,
+                    ImagePath="../Images/Weisbier.png"
                 }
             };
         }

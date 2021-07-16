@@ -50,8 +50,6 @@ namespace PubMVVM.ViewModel
                 var item = SelectedItem as Pub;
                 Pub = item;
                 Count = 1;
-                MainWindow.mainImage.Source = new BitmapImage(new Uri(
-                Pub.ImagePath, UriKind.RelativeOrAbsolute));
             });
 
 

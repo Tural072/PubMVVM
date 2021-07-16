@@ -17,13 +17,14 @@ namespace PubMVVM.Repostory
                 {
                     Name="NZS",
                     Price=1,
-                    Volume=0.4
+                    Volume=0.4,
+                    ImagePath="Images/bread1.png"
                 },
                 new Pub
                 {
                     Name="Blanche",
-                    Price=7,
-                    Volume=0.4
+                    Price=6.5,
+                    Volume=0.5
                 },
                 new Pub
                 {

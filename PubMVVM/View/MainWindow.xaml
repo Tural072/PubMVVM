@@ -15,7 +15,8 @@
         </Grid.RowDefinitions>
         <ComboBox Name="ComboBox"
             ItemsSource="{Binding Pubs}" 
-                  DisplayMemberPath="Name">
+                  DisplayMemberPath="Name"
+                  FontSize="22">
             <ie:Interaction.Triggers>
                 <ie:EventTrigger EventName="SelectionChanged">
                     <ie:InvokeCommandAction Command="{Binding SelectedItemChangedCommand}" CommandParameter="{Binding ElementName=ComboBox, Path=SelectedItem}" />
@@ -27,7 +28,7 @@
                 <ColumnDefinition Width="1.5*"/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <Image />
+            <Image Source="{Binding Pub.ImagePath}" x:Name="mainImage"></Image>
             <Grid Grid.Column="1">
                 <Grid>
                     <Grid.RowDefinitions>
@@ -81,12 +82,20 @@
                         <Button Width="76"
                                 Content="+"
                                 FontSize="25"
-                                Style="{StaticResource CircleButton}"/>
-                        <TextBlock Width="76"/>
+                                Style="{StaticResource CircleButton}"
+                                Command="{Binding ButtonClickPlus}"/>
+                        <Label Content="{Binding Count}" 
+                                   Name="countLbl" 
+                                   Width="76"
+                                   FontSize="26"
+                                   VerticalAlignment="Center"
+                                   HorizontalContentAlignment="Center">
+                        </Label>
                         <Button Width="76"
                                 Content="-"
                                 FontSize="25"
-                                Style="{StaticResource CircleButton}"/>
+                                Style="{StaticResource CircleButton}"
+                                Command="{Binding ButtonClickMinus}"/>
                     </StackPanel>
                 </Grid>
             </Grid>
@@ -96,15 +105,18 @@
             <Button Width="193"
                     Content="Buy"
                     FontSize="25"
-                    Style="{StaticResource OrangeButton}"/>
+                    Style="{StaticResource OrangeButton}"
+                    Command="{Binding BuyCommand}"/>
             <Button Width="193"
                     Content="Reset"
                     FontSize="25"
-                    Style="{StaticResource OrangeButton}"/>
+                    Style="{StaticResource OrangeButton}"
+                    Command="{Binding ResetCommand}"/>
             <Button Width="193"
                     Content="History"
                     FontSize="25"
-                    Style="{StaticResource OrangeButton}"/>
+                    Style="{StaticResource OrangeButton}"
+                    Command="{Binding ShowHistoryCommand}"/>
         </StackPanel>
     </Grid>
 </Window>

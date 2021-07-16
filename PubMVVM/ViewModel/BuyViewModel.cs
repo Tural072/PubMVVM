@@ -11,12 +11,12 @@ namespace PubMVVM.ViewModel
 {
     public class BuyViewModel:BaseViewModel
     {
-        private Pub Pub;
+        private Pub pub;
 
-        public Pub MyProperty
+        public Pub Pub
         {
-            get { return Pub; }
-            set { Pub = value;OnPropertyChanged();}
+            get { return pub; }
+            set { pub = value;OnPropertyChanged();}
         }
 
        
